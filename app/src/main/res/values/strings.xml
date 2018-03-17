@@ -1,3 +1,46 @@
 <resources>
-    <string name="app_name">RMADZ1</string>
+    <string name="app_name">DZ1</string>
+    <string name="barbara_liskov">
+        Barbara Liskov\n07.10.1939. -\nBarbara Liskov je američka programerka te ujedno i profesorica na MIT-u.
+        Jedna je od prvih žena s doktoratom iz računarstva te je dobitnica nagrade John von Neumann i Turingove nagrade.
+
+
+
+    </string>
+
+    <string name="daphne_koller">
+        Daphne Koller\n27.08.1968. - \nDaphne Koller je izraelsko-američka profesorica na Stanfordu.
+        Bavi se umjetnom inteligencijom te njezinom primjerom u biomedicinskoj znanosti. Jedna je od osnivača Courserae.
+    </string>
+
+    <string name="grace_hopper">
+        Grace Hopper\n09.12.1906. - 01.01.1992. \nGrace Hopper je bila jedna od prvih programera harvardskog
+        Mark I računala te je osmislila prve alate za kompajliranje.
+
+    </string>
+
+    <string-array name="barbara_quotes">
+        <item>I didn't have a plan for where I was going. Instead I reacted to obstacles and opportunities.</item>
+        <item>Be aware of what you’re doing, and what the opportunities are, and step into what seems right, and see where it takes you.</item>
+        <item>Figure out what you like to do, and what you can do well—and the two are not all that dissimilar, because you don’t typically like doing something if you don’t do it well.</item>
+    </string-array>
+
+    <string-array name="daphne_quotes">
+        <item>We should spend less time at universities filling our students' minds with content by lecturing at them,
+            and more time igniting their creativity … by actually talking with them. </item>
+
+
+    </string-array>
+
+    <string-array name="grace_quotes">
+        <item>Some day, on the corporate balance sheet, there will be an entry which reads, "Information"; for in most cases,
+            the information is more valuable than the hardware which processes it.</item>
+
+        <item>The only phrase I've ever disliked is, 'Why, we've always done it that way.' I always tell young people,
+            'Go ahead and do it. You can always apologize later.'</item>
+
+        <item>Humans are allergic to change. They love to say, 'We've always done it this way.' I try to fight that.
+            That's why I have a clock on my wall that runs counter-clockwise.</item>
+    </string-array>
+
 </resources>
