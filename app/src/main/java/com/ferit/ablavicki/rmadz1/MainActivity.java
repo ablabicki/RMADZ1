@@ -13,8 +13,9 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, View.OnTouchListener {
 
-    ImageView iBarbara, iDaphne, iGrace;
-    TextView tBarbara, tDaphne, tGrace;
+    ImageView iBarbara, iGrace, iJohn;
+    TextView tBarbara, tGrace, tJohn;
+    InspiringPerson Barbara, Grace, John;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,34 +24,49 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setUp();
     }
 
+
+
     private void setUp(){
+        Barbara = new InspiringPerson(R.drawable.barbara, getString(R.string.barbara_liskov),
+                getResources().getStringArray(R.array.barbara_quotes));
+        Grace = new InspiringPerson(R.drawable.barbara, getString(R.string.grace_hopper),
+                getResources().getStringArray(R.array.grace_quotes));
+        John = new InspiringPerson(R.drawable.barbara, getString(R.string.john_resig),
+                getResources().getStringArray(R.array.john_quotes));
+
         this.iBarbara = (ImageView) findViewById(R.id.picture_barbara);
-        this.iDaphne = (ImageView) findViewById(R.id.picture_daphne);
+        this.iJohn = (ImageView) findViewById(R.id.picture_john);
         this.iGrace = (ImageView) findViewById(R.id.picture_grace);
         this.tBarbara = (TextView) findViewById(R.id.text_barbara);
-        this.tDaphne = (TextView) findViewById(R.id.text_daphne);
+        this.tJohn = (TextView) findViewById(R.id.text_john);
         this.tGrace = (TextView) findViewById(R.id.text_grace);
 
+        //programsko postavljanje atributa
+        this.iBarbara.setImageResource(Barbara.getPicture());
+        this.tBarbara.setText(Barbara.getText());
+
         this.iBarbara.setOnClickListener(this);
-        this.iDaphne.setOnClickListener(this);
+        this.iJohn.setOnClickListener(this);
         this.iGrace.setOnClickListener(this);
+
         this.tBarbara.setOnTouchListener(this);
-        this.tDaphne.setOnTouchListener(this);
+        this.tJohn.setOnTouchListener(this);
         this.tGrace.setOnTouchListener(this);
     }
 
     public void onClick(View view){
         switch (view.getId()) {
             case (R.id.picture_barbara):
-                Toast.makeText(this, "Barbara", Toast.LENGTH_SHORT).show();
-                break;
 
-            case (R.id.picture_daphne):
-                Toast.makeText(this, "Daphne", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, Barbara.randomQuote(), Toast.LENGTH_SHORT).show();
                 break;
 
             case (R.id.picture_grace):
-                Toast.makeText(this, "Grace", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, Grace.randomQuote(), Toast.LENGTH_SHORT).show();
+                break;
+
+            case (R.id.picture_john):
+                Toast.makeText(this, John.randomQuote(), Toast.LENGTH_SHORT).show();
                 break;
         }
     }
@@ -63,14 +79,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 tBarbara.setMovementMethod(new ScrollingMovementMethod());
                 break;
 
-            case (R.id.text_daphne) :
-                tDaphne.setMovementMethod(new ScrollingMovementMethod());
-                break;
-
             case (R.id.text_grace) :
                 tGrace.setMovementMethod(new ScrollingMovementMethod());
                 break;
 
+            case (R.id.text_john) :
+                tJohn.setMovementMethod(new ScrollingMovementMethod());
+                break;
         }
         return false;
     }

@@ -7,23 +7,39 @@ package com.ferit.ablavicki.rmadz1;
 public class InspiringPerson {
 
     int mPicture;
-    String mName, mText;
+    String mText;
+    String mQuote [];
 
-    public InspiringPerson (int picture, String name, String text){
+
+    public InspiringPerson (int picture, String text, String [] quote){
         mPicture = picture;
-        mName = name;
         mText = text;
+        mQuote = quote;
     }
 
     public int getPicture() {
         return mPicture;
     }
 
-    public String getName() {
-        return mName;
-    }
-
     public String getText() {
         return mText;
+    }
+
+    public String randomQuote(){
+        int length = mQuote.length;
+        int random = (int) (Math.random()*length);
+        return mQuote[random];
+    }
+
+    public String[] getQuote() {
+        return mQuote;
+    }
+
+    public void setPicture(int mPicture) {
+        this.mPicture = mPicture;
+    }
+
+    public void setText(String mText) {
+        this.mText = mText;
     }
 }
