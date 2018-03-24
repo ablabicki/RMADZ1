@@ -1,6 +1,5 @@
 package com.ferit.ablavicki.rmadz1;
 
-import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
@@ -25,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-
+    //metoda za unos podataka
     private void setUp(){
         Barbara = new InspiringPerson(R.drawable.barbara, getString(R.string.barbara_liskov),
                 getResources().getStringArray(R.array.barbara_quotes));
@@ -41,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.tJohn = (TextView) findViewById(R.id.text_john);
         this.tGrace = (TextView) findViewById(R.id.text_grace);
 
-        //programsko postavljanje atributa
+        //programsko postavljanje sadržaja na layoutu za prvu osobu (Barbara)
         this.iBarbara.setImageResource(Barbara.getPicture());
         this.tBarbara.setText(Barbara.getText());
 
@@ -58,15 +57,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()) {
             case (R.id.picture_barbara):
 
-                Toast.makeText(this, Barbara.randomQuote(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, Barbara.randomQuote(), Toast.LENGTH_LONG).show();
                 break;
 
             case (R.id.picture_grace):
-                Toast.makeText(this, Grace.randomQuote(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, Grace.randomQuote(), Toast.LENGTH_LONG).show();
                 break;
 
             case (R.id.picture_john):
-                Toast.makeText(this, John.randomQuote(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, John.randomQuote(), Toast.LENGTH_LONG).show();
                 break;
         }
     }

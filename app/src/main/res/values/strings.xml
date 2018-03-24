@@ -17,6 +17,7 @@
         related tools. She popularized the idea of machine-independent programming languages, which led to the development of COBOL.
 
     </string>
+    <string name="welcome">Welcome!</string>
 
     <string-array name="barbara_quotes">
         <item>I didn\'t have a plan for where I was going. Instead I reacted to obstacles and opportunities.</item>
